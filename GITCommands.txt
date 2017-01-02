@@ -31,6 +31,9 @@ Walks through changed files and prompts user for add option. Does not include ne
 git add -p
 
 *************************************************
+Commits all files changed since last commit. Does not add files
+git commit -m "Message Text"  
+
 Commits all files changed since last commit. Does not include new files.
 git commit -a -m "Message Text"  
 
