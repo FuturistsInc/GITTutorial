@@ -11,7 +11,8 @@ git config user.name
 *************************************************
 Create files required in the current directory to perform version control: 
 git init
-First required command when using GIT on a new project/ folder.
+touch .gitignore
+First required commands when using GIT on a new project/ folder.
 *************************************************
 git status
 
@@ -112,5 +113,5 @@ Overwrites text in a file at the specified location. If the file does not exist,
 echo “This text replaces existing text in the file” > /c/SomeFolder/newFile.txt
 
 *************************************************
-
+touch .gitignore
 *************************************************
