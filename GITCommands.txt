@@ -1,0 +1,92 @@
+Shift+Ins to paste
+
+*************************************************
+git config --global user.name "FuturistsInc"
+git config --global user.email koon.min.wong@gmail.com
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
+git config --list
+git config user.name
+
+*************************************************
+Create files required in the current directory to perform version control: 
+git init
+
+*************************************************
+Add all changes in the working directory to the next commit, including new files and deletions: 
+git add -A
+
+Add all changes to tracked files and all new files to the next commit, but do not add file deletions: 
+git add .
+
+adds all changes to tracked files and all file removals to the next commit, but does not add new files:
+git add -u
+
+Walks through changed files and prompts user for add option. Does not include new files: 
+git add -p
+
+*************************************************
+Commits all files changed since last commit. Does not include new files.
+git commit –a –m “Message Text”
+
+Commits the changes for the specific file(s) and includes the commit message specified: 
+git commit FileName –m “Message Text”
+
+Adds all changes to the previous commit and overwrites the commit message with the new Message Text. Does not include new files: 
+git commit –a –amend –m “Message Text”
+
+*************************************************
+Syntax:
+git remote add <RemoteName> <RemoteURL> 
+
+git remote show <RemoteName>
+
+NOTE: As used here, RemoteName represents a local alias (or nickname) for your remote repository. The name of the remote on the server does not necessarily have to be the same as your local alias. 
+
+Add the specified remote repo to your git config file. The remote can then be pushed to/fetched from: 
+git remote add RemoteName https://RemoteName/Proj.git
+
+Print information about the specified remote to the console window: 
+git remote show RemoteName
+
+*************************************************
+
+Update the remote server with commits for all existing branches common to both the local system and the server. Branches on the local system which have never been pushed to the server are not shared. 
+git push
+
+Updates the remote server with commits for the specific branch named. This command is required to push a new branch from the local repo to the server if the new branch does not exist on the server. 
+git push RemoteName BranchName
+
+Retrieve  any commits from the server that do not already exist locally: 
+git fetch RemoteName
+
+NOTE: git fetch retrieves information from the remote and records it locally as a branch in your current repository. In order to merge the new changes into your local branch, you need to run git fetch followed by git merge. Since there may be more than one branch on the remote repository, it is necessary to specify the branch you wish to merge into your current branch:
+
+Merge the newly fetched branch from the remote into your current working branch: 
+git merge RemoteName/BranchName
+
+Fetch changes from the specified branch in the remote, and merge them into the current local branch: 
+git pull RemoteName/BranchName
+NOTE: git pull is essentially the same as running git fetch immediately followed by git merge.
+
+*************************************************
+
+Create a single (empty) text file in the current directory:
+touch newFile.txt
+
+Create multiple (empty) text files in the current directory: 
+touch /c/SomeFolder/newFile.txt
+
+Create multiple (empty) text files in the current directory: 
+touch newFile_1.txt newFile_2 . . . newFile_n
+
+*************************************************
+
+Append text to a file. If the file does not exist, one is created: 
+echo “This text is added to the end of the file” >> newFile.txt
+
+Overwrites text in a file. If the file does not exist, one is created:
+echo “This text replaces existing text in the file” > newFile.txt
+
+Overwrites text in a file at the specified location. If the file does not exist, one is created:
+echo “This text replaces existing text in the file” > /c/SomeFolder/newFile.txt
+
