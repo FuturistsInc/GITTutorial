@@ -85,6 +85,8 @@ Updates the remote server with commits for the specific branch named. This comma
 git push RemoteName BranchName
 e.g. git push origin master
 
+*************************************************
+
 Retrieve  any commits from the server that do not already exist locally: 
 git fetch RemoteName
 e.g. git merge origin
