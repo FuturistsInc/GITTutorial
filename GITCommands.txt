@@ -1,6 +1,9 @@
+GIT Hub UserName and Password
+FuturistsInc
+i9mrqci9mrqc
+*************************************************
 Shift+Ins to paste
 Ctrl+C to exit from the > sign
-
 *************************************************
 git config --global user.name "FuturistsInc"
 git config --global user.email koon.min.wong@gmail.com
@@ -80,17 +83,20 @@ git push
 
 Updates the remote server with commits for the specific branch named. This command is required to push a new branch from the local repo to the server if the new branch does not exist on the server. 
 git push RemoteName BranchName
+e.g. git push origin master
 
 Retrieve  any commits from the server that do not already exist locally: 
 git fetch RemoteName
+e.g. git merge origin
 
 NOTE: git fetch retrieves information from the remote and records it locally as a branch in your current repository. In order to merge the new changes into your local branch, you need to run git fetch followed by git merge. Since there may be more than one branch on the remote repository, it is necessary to specify the branch you wish to merge into your current branch:
 
 Merge the newly fetched branch from the remote into your current working branch: 
 git merge RemoteName/BranchName
-
+e.g. git merge origin master
 Fetch changes from the specified branch in the remote, and merge them into the current local branch: 
 git pull RemoteName/BranchName
+e.g. git pull origin master
 NOTE: git pull is essentially the same as running git fetch immediately followed by git merge.
 
 *************************************************
@@ -116,5 +122,18 @@ Overwrites text in a file at the specified location. If the file does not exist,
 echo “This text replaces existing text in the file” > /c/SomeFolder/newFile.txt
 
 *************************************************
-touch .gitignore
+To push a local repository to a new Git Hub project, first set up the Github project at https://github.com/ then assuming you want to give your project URL the alias "origin" and the Git Hub project URL is https://github.com/FuturistsInc/GITTutorial.git:
+git remote add origin https://github.com/FuturistsInc/GITTutorial.git
+git push -u origin master
 *************************************************
+
+git remote
+git clone https://github.com/FuturistsInc/GITTutorial.git
+cd fluentguard
+
+To get the remote URL:
+git remote -v
+
+git fetch origin
+
+git pull origin master
