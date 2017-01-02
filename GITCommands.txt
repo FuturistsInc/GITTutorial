@@ -1,4 +1,5 @@
 Shift+Ins to paste
+Ctrl+C to exit from the > sign
 
 *************************************************
 git config --global user.name "FuturistsInc"
@@ -10,8 +11,12 @@ git config user.name
 *************************************************
 Create files required in the current directory to perform version control: 
 git init
+First required command when using GIT on a new project/ folder.
+*************************************************
+git status
 
 *************************************************
+
 Add all changes in the working directory to the next commit, including new files and deletions: 
 git add -A
 
@@ -26,13 +31,29 @@ git add -p
 
 *************************************************
 Commits all files changed since last commit. Does not include new files.
-git commit –a –m “Message Text”
+git commit -a -m "Message Text"  
 
 Commits the changes for the specific file(s) and includes the commit message specified: 
 git commit FileName –m “Message Text”
 
 Adds all changes to the previous commit and overwrites the commit message with the new Message Text. Does not include new files: 
 git commit –a –amend –m “Message Text”
+
+*************************************************
+List the contents of the current directory, one item per line:
+ls -1
+
+List the contents of the current directory (folder) as a horizontal list: 
+ls
+
+List only the subdirectories (folders) within the current directory:
+ls –d */
+
+List everything in long form, vertically:
+ls –al
+
+List all contents, including subdirectory contents, single item per line: 
+ls -1 *
 
 *************************************************
 Syntax:
@@ -89,4 +110,6 @@ echo “This text replaces existing text in the file” > newFile.txt
 
 Overwrites text in a file at the specified location. If the file does not exist, one is created:
 echo “This text replaces existing text in the file” > /c/SomeFolder/newFile.txt
+
+*************************************************
 
