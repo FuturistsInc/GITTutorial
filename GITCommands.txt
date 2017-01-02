@@ -4,22 +4,39 @@ i9mrqci9mrqc
 *************************************************
 Shift+Ins to paste
 Ctrl+C to exit from the > sign
+exit to exit Git Bash
 *************************************************
+
+Summary of frequent update commands
+git add -A
+git commit -m "Message Text"
+git status
+git push origin master
+
+*************************************************
+Configuring GIT:
 git config --global user.name "FuturistsInc"
 git config --global user.email koon.min.wong@gmail.com
 git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
 git config --list
 git config user.name
-
 *************************************************
+First required commands when using GIT on a new project/ folder:
+
 Create files required in the current directory to perform version control: 
 git init
 touch .gitignore
-First required commands when using GIT on a new project/ folder.
+*************************************************
+First required commands to transfer files from local directory to new Git Hub project:
+
+First set up the Github project at https://github.com/ then assuming you want to give your project URL the alias "origin" and the Git Hub project URL is https://github.com/FuturistsInc/GITTutorial.git:
+
+git remote add origin https://github.com/FuturistsInc/GITTutorial.git
+git push -u origin master
 *************************************************
 git status
-
 *************************************************
+Adding files in GIT:
 
 Add all changes in the working directory to the next commit, including new files and deletions: 
 git add -A
@@ -27,13 +44,14 @@ git add -A
 Add all changes to tracked files and all new files to the next commit, but do not add file deletions: 
 git add .
 
-adds all changes to tracked files and all file removals to the next commit, but does not add new files:
+Adds all changes to tracked files and all file removals to the next commit, but does not add new files:
 git add -u
 
 Walks through changed files and prompts user for add option. Does not include new files: 
 git add -p
-
 *************************************************
+Committing files in GIT:
+
 Commits all files changed since last commit. Does not add files
 git commit -m "Message Text"  
 
@@ -123,10 +141,6 @@ echo “This text replaces existing text in the file” > newFile.txt
 Overwrites text in a file at the specified location. If the file does not exist, one is created:
 echo “This text replaces existing text in the file” > /c/SomeFolder/newFile.txt
 
-*************************************************
-To push a local repository to a new Git Hub project, first set up the Github project at https://github.com/ then assuming you want to give your project URL the alias "origin" and the Git Hub project URL is https://github.com/FuturistsInc/GITTutorial.git:
-git remote add origin https://github.com/FuturistsInc/GITTutorial.git
-git push -u origin master
 *************************************************
 
 git remote
